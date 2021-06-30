@@ -1,0 +1,211 @@
+// MAIN CSS
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700|Source+Sans+Pro:300,400,600,700&display=swap");
+
+// RESET CSS
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%; /* font-size or lineheight -> nên sử dụng rem*/
+    color: #333;
+    font-family: "Source Sans Pro", sans-serif;
+    
+
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+}
+
+#home {
+    overflow: hidden;
+    color: #333;
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile {
+    padding: 20px;
+    display: flex;
+    .avt {
+        margin: auto;
+        display: inline-block;
+        position: relative;
+
+        .avt-img {
+            position: relative;
+            width: 50vh;
+            height: 50vh;
+            border-radius: 50%;
+            overflow: hidden;
+            border: pink solid 10px;
+            box-shadow: 0 0 10vh #1b86f9;
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: 85vh;
+                height: 85vh;
+                object-fit: cover;
+                object-position: top 10px left 0;
+            }
+        }
+    }
+
+    .who {
+        p {
+            color: #1b86f9;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+        border: pink solid 10px;
+        
+        font-family: "DM Sans", sans-serif;
+        font-size: 10vh;
+        font-weight: bold;
+        color: $primaryColor;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%,10%);
+        border-radius: 10px;
+        z-index: 2;
+    }
+}
+
+#product {
+    flex: 1;
+    display: flex;
+}
+
+.products {
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    overflow: auto;
+    padding: 20px;
+}
+
+.product {
+    cursor: pointer;
+    display: block;
+    height: 15vw;
+    width: 15vw;
+    flex-shrink: 0;
+    margin: 0 10px;
+    padding: 20px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+
+    &:hover {
+        .product-link {
+            filter: blur(1px);
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+        
+        .where {
+            display: flex;
+        }
+    }
+
+    .product-link {
+        display: block;
+    }
+
+    .where {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+        a {
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 1.5rem;
+        }
+
+        a:first-child {
+            margin-bottom:10px;
+            width: fit-content;
+            color: white;
+            background-color: rgba(0, 153, 255,0.7);
+            border: pink 1px solid;
+            &:hover {
+                backdrop-filter: blur(.3px);
+                -webkit-backdrop-filter: blur(.3px);
+                border: rgb(0, 153, 255) 2px solid;
+            }
+        }
+
+        a:last-child {
+            color: white;
+            background-color: transparent;
+            border: rgb(0, 153, 255) 2px solid;
+
+            &:hover {
+                backdrop-filter: blur(.3px);
+                -webkit-backdrop-filter: blur(.3px);
+                background-color: rgba(204, 204, 204, 0.3);
+            }
+        }
+    }
+
+    .product-avt {
+        img {
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .product-name {
+        color: rgb(0, 153, 255);
+        font-size: 2vh;
+        text-align: center;
+        position: absolute;
+        bottom: 20%;
+        left: 0;
+        width: 100%;
+        background-image: linear-gradient(rgba(255, 192, 203, 0.7) 30%,rgba(255, 192, 203,1),rgba(255, 192, 203,0.5)); 
+        // background-color: rgb(255, 192, 203);
+        box-shadow: 0 0 10vh #1b86f9;
+    }
+}
+
+#project {
+    overflow: hidden;
+    background-image: url(../img/bg-all.gif);
+}
+.project {
+    padding: 40px;
+    iframe {
+        box-shadow: 0 0 10vh #1b86f9;
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+        height: 100vh;
+    }
+}

@@ -1,0 +1,16 @@
+:root {
+    --s-gutter: 4px;
+    --m-gutter: 8px;
+    --l-gutter: 12px;
+}
+
+.grid {
+    width: 100%;
+    display: block;
+    padding: 0;
+}
+
+.grid.wide {
+    max-width: 1200px;
+    margin: 0 auto;
+}

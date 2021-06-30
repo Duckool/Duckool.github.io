@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\json-sever"
+		},
+		{
+			"path": "..\\myProfile"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "myProfile",
+		"liveServer.settings.port": 5501
+	}
+}

@@ -1,0 +1,340 @@
+/* BREAKPOINT */
+// XL: >1088px
+// L : 1088px
+// M : 930
+// S : 690
+// XS : 630
+
+#app {
+    overflow: hidden;
+}
+
+// XL
+@media (min-width: 1089px){
+    .hidden-on-XL {
+        display: none;
+    }
+}
+
+// L : 1088px
+@media (min-width: 931px) and (max-width: 1088px)  {
+    .hidden-on-L {
+        display: none;
+    }
+}
+
+@media (max-width: 1088px)  {
+    .hidden-on-lte-L {
+        display: none;
+    }
+
+    .follow-me {
+        &:visited {
+            .follow-text {
+                transform: translateY(100%);
+            }
+    
+            .follow-info {
+                top: 0;
+            }
+        }  
+    }
+    
+    .main-search {
+        padding: 8px 0;
+        i {
+            font-size: 2rem;
+            color: $textColorPrimary;
+            margin-left: 12px;
+        }
+
+        input {
+            font-family: "Source Sans Pro", sans-serif;
+
+            background-color: transparent;
+            outline: none;
+            height: 100%;
+            width: 100%;
+            border: none;
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+            padding: 4px;
+            color: #ccc;
+        }
+    }
+    
+    #rightSideButtonCheck:checked ~ .rightSide {
+        transform: translateX(0);
+    }
+
+    .rightSideButton {
+        cursor: pointer;
+        color: white;
+        padding: 10px 18px;
+        display: inline-block;
+        background-color: transparent;
+        border: none;
+        position: fixed;
+        top: 8px;
+        right: 8px;
+        z-index: 1;
+
+        &:hover {
+            background-color: $borderColor;
+        }
+
+        &:before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 14px;
+            right: 15px;
+            background-color: #1b86f8;
+            border: 2px solid #1e2031;
+        }
+    }
+    .rightSide {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        transform: translateX(calc(100% + 8px));
+        transition: 0.3s;
+
+        .rightSideClose {
+            i {
+                font-size: 20px;
+            }
+        }
+
+        .chat-search {
+            i {
+                font-size: 1.6rem;
+            }
+    
+            input {
+                font-size: 1.5rem;
+                letter-spacing: 2px;
+            }
+        }
+    }
+}
+
+// M : 930
+
+@media (min-width: 769px) and (max-width: 930px)  {
+    .hidden-on-M {
+        display: none;
+    }
+}
+
+@media (max-width: 930px)  {
+    .hidden-on-lte-M {
+        display: none;
+    }
+
+    #leftSideButtonCheck:checked ~ .leftSide {
+        .leftSideButton {
+            cursor: pointer;
+            i[class*="bx bx-menu"] {
+                display: none;
+            }
+    
+            i[class*="bx bx-arrow-back"] {
+                display: block;
+            } 
+        }
+    }
+
+    #leftSideButtonCheck:not(:checked) ~ .leftSide {
+        width: 56px;
+        overflow: hidden;
+
+        .logo {
+            color: white;
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .leftSideContent {
+            display: none;
+        }
+    }
+    .leftSideButton {
+        i[class*="bx bx-menu"] {
+            display: block;
+            text-align: center;
+            font-size: 3rem;
+            color: white;
+            line-height: 59px;
+            background-color: rgba(39, 42, 58, 0.5);
+        }
+
+        i[class*="bx bx-arrow-back"] {
+            display: none;
+            text-align: center;
+            font-size: 3rem;
+            color: white;
+            line-height: 59px;
+            background-color: rgba(39, 42, 58, 0.5);
+        }
+    }
+
+    .timeline-left {
+        width: 310px;
+    }
+}
+
+
+// S : 768
+
+@media (min-width: 701px) and (max-width: 768px)  {
+    .hidden-on-S {
+        display: none;
+    }
+}
+
+@media (max-width: 768px)  {
+    .hidden-on-lte-S {
+        display: none;
+    }
+
+    .timeline {
+        flex-direction: column-reverse;
+    }
+
+    .timeline-left {
+        width: unset;
+        padding-right: 0;
+    }
+
+    .timeline-right {
+        padding-left: 0;
+        padding-bottom: 20px;
+    }
+}
+
+// XS : 700
+
+@media (max-width: 700px)  {
+    .hidden-on-lte-XS {
+        display: none;
+    }
+
+    .main-container {
+        padding: 10px;
+    }
+
+    :root {
+        --profile-avt-size: 100px;
+    }
+
+    .profile {
+        padding-top: 240px;
+    }
+
+    .profile-info {
+        
+
+        .profile-avt {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;  
+            transform: translate(-50%,0);
+            width: var(--profile-avt-size);   
+    
+            .profile-img {
+            }
+        }
+    
+        .profile-name {
+            bottom: 36%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+            padding: 0;
+        }
+
+        .profile-menu {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            height: unset;
+            padding: 0;
+
+            .profile-menu-link {
+                padding: 16px;
+            }
+        }
+    }
+}
+
+// XXS : 480
+
+@media (max-width: 480px)  {
+    .hidden-on-XXS {
+        display: none;
+    }
+    
+    .profile-info {
+        .profile-menu {
+            .profile-menu-link:nth-child(n+4) {
+                display: none;
+            }
+        }
+    }
+
+    .main-container {
+        padding: 5px;
+    }
+}
+
+// XXXS
+
+@media (max-width: 335px)  {
+    .hidden-on-XXXS {
+        display: none;
+    }
+
+    #leftSideButtonCheck:not(:checked) ~ .leftSide {
+        width: 0;
+        overflow: hidden;
+
+        .logo,
+        .leftSideButton,
+        .lefeSideContent {
+            display: none;
+            transition: 0.3s;
+        }
+    }
+
+    .leftSideOpen {
+        transition: 0.3s;
+        display: block;
+        font-size: 3rem;
+        cursor: pointer;
+        position: fixed;
+        z-index: 2;
+        top: 50vh;
+        left: 0;
+        padding: 20px 0;
+        transform: translateX(-8px);
+    }
+    
+    .main-container {
+        padding: 0px;
+    }
+
+    .profile-info {
+        .profile-menu {
+            .profile-menu-link:nth-child(n+2) {
+                display: none;
+            }
+        }
+    }
+}

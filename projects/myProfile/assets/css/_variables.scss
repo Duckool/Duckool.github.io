@@ -1,0 +1,38 @@
+$containerBoderSize: 8px;
+$primaryColor: rgb(21, 23, 40);
+$secondaryColor: white;
+$textColor: white;
+$textColorSecondary: #5c5e6e;
+$textColorPrimary: #9c9cab;
+$textFontSecondary: "DM Sans", sans-serif;
+$textColorLink: #1771d6;
+$borderColor: #272a3a;
+$profile-menu-height: 64px;
+:root {
+    /* Color */
+    --primary-color: #151728;
+    --secondary-color: white;
+    --text-color: #333;
+    --primary-text-color: black;
+    --secondary-text-color: #ccc;
+    --border-color: #dbdbdb;
+    --purple: #bd93f9;
+    --pink: #ff6bcb;
+    --blue: #8be9fd;
+    --gray: #333;
+    --btn-color: #ee4d2d;
+    /* Font */
+    --primary-font: 'roboto', sans-serif;
+    --secondary-font: 'Oswald', sans-serif;
+
+    /*  */
+    --gradient: linear-gradient(40deg, #ff6ec4, #7873f5);
+    --shadow: 0 0 15px 0 rgba(0,0,0,0.05);
+
+    // 
+
+    /*  */
+    --container-boder-size: 8px;
+    --profile-menu-height: 64px;
+    --profile-avt-size: 148px;
+}

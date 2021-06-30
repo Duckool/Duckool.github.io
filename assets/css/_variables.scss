@@ -1,0 +1,23 @@
+$primaryColor: rgb(21, 23, 40);
+$secondaryColor: white;
+:root {
+    /* Color */
+    --primary-color: #151728;
+    --secondary-color: white;
+    --text-color: #333;
+    --primary-text-color: black;
+    --secondary-text-color: #ccc;
+    --border-color: #dbdbdb;
+    --purple: #bd93f9;
+    --pink: #ff6bcb;
+    --blue: #8be9fd;
+    --gray: #333;
+    --btn-color: #ee4d2d;
+    /* Font */
+    --primary-font: 'roboto', sans-serif;
+    --secondary-font: 'Oswald', sans-serif;
+
+    /*  */
+    --gradient: linear-gradient(40deg, #ff6ec4, #7873f5);
+    --shadow: 0 0 15px 0 rgba(0,0,0,0.05);
+}

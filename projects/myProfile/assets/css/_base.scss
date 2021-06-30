@@ -1,0 +1,94 @@
+/* Import */
+
+/* Cursor default */
+.cursor--default {
+    cursor: default;
+}
+
+/* Clear <a/> css */
+a {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+.a-recover {
+    text-decoration: default;
+    color: default;
+    outline: default;
+}
+/*  */
+.full-width {
+    width: 100%;
+}
+/*  */
+.bridge-box::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background-color: transparent;
+    height: var(--bridge-box-height,10%);
+    width: var(--bridge-box-width,100%);
+    top: var(--bridge-box-top,initial);
+    right: var(--bridge-box-right,initial);
+    left: var(--bridge-box-left,initial);
+    bottom: var(--bridge-box-top,initial);
+}
+
+
+.separate-line {
+    border-top: var(--border-top-size,0) solid var(--border-top-color);
+    border-right: var(--border-right-size,0) solid var(--border-right-color);
+    border-left: var(--border-left-size,0) solid var(--border-left-color);
+    border-bottom: var(--border-bottom-size,0) solid var(--border-bottom-color);
+}
+
+/*  */
+.fake-box {
+    width: 0.000000000000000000000000000000000000000000001px;
+}
+/* Button */
+.btn {
+    color: white;
+    background-color: var(--btn-color);
+    border-radius: 3px;
+    
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+/* Text-hiden */
+.text-hidden {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-quantity,2);
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Animation */
+@keyframes FadeIn {
+    from {
+        opacity: var(--FadeIn-from,0);
+    }
+    to {
+        opacity: var(--FadeIn-to,1);
+    }
+}
+
+@keyframes grows {
+    from {
+        opacity: 0;
+        transform: scale(var(--grow-from,0));
+    }
+    to {
+        opacity: 1;
+        transform: scale(var(--grow-to,1));
+    }
+}
+
+
+
+/* ------- */

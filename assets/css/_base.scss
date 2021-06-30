@@ -1,0 +1,70 @@
+/* Import */
+
+/* Cursor default */
+.cursor--default {
+    cursor: default;
+}
+
+/* Clear <a/> css */
+a {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+.a-recover {
+    text-decoration: default;
+    color: default;
+    outline: default;
+}
+/*  */
+.full-width {
+    width: 100%;
+}
+/*  */
+.fake-box {
+    width: 0.000000000000000000000000000000000000000000001px;
+}
+/* Button */
+.btn {
+    color: white;
+    background-color: var(--btn-color);
+    border-radius: 3px;
+    
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+/* Text-hiden */
+.text-hidden {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-quantity,2);
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Animation */
+@keyframes FadeIn {
+    from {
+        opacity: var(--FadeIn-from,0);
+    }
+    to {
+        opacity: var(--FadeIn-to,1);
+    }
+}
+
+@keyframes grows {
+    from {
+        opacity: 0;
+        transform: scale(var(--grow-from,0));
+    }
+    to {
+        opacity: 1;
+        transform: scale(var(--grow-to,1));
+    }
+}
+
+/* ------- */
